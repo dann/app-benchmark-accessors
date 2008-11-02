@@ -29,7 +29,7 @@ for my $module (@modules) {
         no strict 'refs';
         $version = ${ $module . '::VERSION' };
     }
-    printf "# %s v%s\n", $module, $version;
+    warn sprintf "# %s v%s\n", $module, $version;
 }
 
 pass('versions');
