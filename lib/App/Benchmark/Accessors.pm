@@ -157,6 +157,12 @@ doesn't create setter methods, and L<accessors> doesn't generate constructors.
 Each benchmark test file takes an optional numeric parameter that is used as
 the number of iterations.
 
+It's probably a good idea not to read too much into these benchmarks; they
+could be seen as micro-optimization. However, if you have a complex object
+hierarchy and create lots of objects and run many many getters/setters on
+them, they could help to save some time. But be sure to use L<Devel::NYTProf>
+first to see where your real bottlenecks are.
+
 =head1 BUGS AND LIMITATIONS
 
 No bugs have been reported.
