@@ -20,6 +20,8 @@ my @modules = qw(
     Spiffy
     Class::Spiffy
     accessors
+    Class::XSAccessor
+    Class::XSAccessor::Array
 );
 
 for my $module (@modules) {

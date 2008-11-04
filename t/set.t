@@ -21,6 +21,9 @@ my $ClassMethodMaker         = WithClassMethodMaker->new;
 my $Accessors                = WithAccessors->new;
 my $Spiffy                   = WithSpiffy->new;
 my $ClassSpiffy              = WithClassSpiffy->new;
+my $ClassXSAccessor          = WithClassXSAccessor->new;
+my $ClassXSAccessorArray     = WithClassXSAccessorArray->new;
+my $ObjectTinyXS             = WithObjectTinyXS->new;
 
 benchmark_diag($iterations, {
     moose =>
@@ -49,5 +52,11 @@ benchmark_diag($iterations, {
         sub { $Spiffy->myattr(27) },
     class_spiffy =>
         sub { $ClassSpiffy->myattr(27) },
+    class_xsaccessor =>
+        sub { $ClassXSAccessor->myattr },
+    class_xsaccessor_array =>
+        sub { $ClassXSAccessorArray->myattr },
+    object_tiny_xs =>
+        sub { $ObjectTinyXS->myattr },
 });
 

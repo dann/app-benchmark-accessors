@@ -21,6 +21,8 @@ requires 'Mouse';
 requires 'Object::Tiny';
 requires 'Spiffy';
 requires 'accessors';
+requires 'Class::XSAccessor';
+requires 'Class::XSAccessor::Array';
 
 recommends 'Test::Pod';
 recommends 'Test::Pod::Coverage';

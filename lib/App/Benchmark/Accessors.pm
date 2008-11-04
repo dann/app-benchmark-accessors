@@ -93,6 +93,31 @@ use accessors qw(myattr);
 sub new { bless {}, shift }
 
 
+package    # hide from PAUSE
+  WithClassXSAccessor;
+use Class::XSAccessor accessors => { myattr => 'myattr' };
+sub new {
+    my $class = shift;
+    bless { @_ } => $class;
+}
+
+
+package    # hide from PAUSE
+  WithClassXSAccessorArray;
+use Class::XSAccessor::Array accessors => { myattr => 0 };
+sub new {
+    my $class = shift;
+    my %args = @_;
+    bless [ $args{myattr} ] => $class;
+}
+
+
+package    # hide from PAUSE
+  WithObjectTinyXS;
+use Object::Tiny qw/myattr/;
+use Class::XSAccessor accessors => { myattr => 'myattr' }, replace => 1;
+
+
 1;
 
 
@@ -138,6 +163,10 @@ following generators are being benchmarked:
 =item Class::Spiffy
 
 =item accessors
+
+=item Class::XSAccessor
+
+=item Class::XSAccessor::Array
 
 =back
 

@@ -35,5 +35,11 @@ benchmark_diag($iterations, {
         sub { WithSpiffy->new(myattr => 27) },
     class_spiffy =>
         sub { WithClassSpiffy->new(myattr => 27) },
+    class_xsaccessor =>
+        sub { WithClassXSAccessor->new(myattr => 27) },
+    class_xsaccessor_array =>
+        sub { WithClassXSAccessorArray->new(myattr => 27) },
+    object_tiny_xs =>
+        sub { WithObjectTinyXS->new(myattr => 27) },
 });
 

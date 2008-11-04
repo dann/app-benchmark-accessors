@@ -3,6 +3,8 @@ Revision history for Perl extension App-Benchmark-Accessors
 0.02  Sun Nov  2 23:57:27 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
      - hidden the helper packages from the PAUSE indexer
      - t/versions.t now also prints to STDERR
+     - added benchmarks for Class::XSAccessor and a combination of Object::Tiny
+       and Class::XSAccessor (thanks Steffen Mueller)
 
 0.01  Sun Nov  2 17:31:18 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
      - original version

@@ -22,6 +22,9 @@ my $Accessors                = WithAccessors->new;
 my $ObjectTiny               = WithObjectTiny->new;
 my $Spiffy                   = WithSpiffy->new;
 my $ClassSpiffy              = WithClassSpiffy->new;
+my $ClassXSAccessor          = WithClassXSAccessor->new;
+my $ClassXSAccessorArray     = WithClassXSAccessorArray->new;
+my $ObjectTinyXS             = WithObjectTinyXS->new;
 
 benchmark_diag($iterations, {
     moose =>
@@ -52,5 +55,11 @@ benchmark_diag($iterations, {
         sub { $Spiffy->myattr },
     class_spiffy =>
         sub { $ClassSpiffy->myattr },
+    class_xsaccessor =>
+        sub { $ClassXSAccessor->myattr },
+    class_xsaccessor_array =>
+        sub { $ClassXSAccessorArray->myattr },
+    object_tiny_xs =>
+        sub { $ObjectTinyXS->myattr },
 });
 
