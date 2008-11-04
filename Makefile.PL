@@ -5,7 +5,7 @@ name 'App-Benchmark-Accessors';
 all_from 'lib/App/Benchmark/Accessors.pm';
 perl_version '5.006';
 
-requires 'App::Benchmark';
+requires 'App::Benchmark' => '0.02';
 requires 'UNIVERSAL::require';
 
 requires 'Class::Accessor';
@@ -23,6 +23,7 @@ requires 'Spiffy';
 requires 'accessors';
 requires 'Class::XSAccessor';
 requires 'Class::XSAccessor::Array';
+requires 'Rose::Object';
 
 recommends 'Test::Pod';
 recommends 'Test::Pod::Coverage';

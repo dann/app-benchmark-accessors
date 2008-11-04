@@ -22,9 +22,10 @@ my @modules = qw(
     accessors
     Class::XSAccessor
     Class::XSAccessor::Array
+    Rose::Object
 );
 
-for my $module (@modules) {
+for my $module (sort @modules) {
     $module->require or die $@;
     my $version;
     {

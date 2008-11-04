@@ -1,5 +1,8 @@
 Revision history for Perl extension App-Benchmark-Accessors
 
+0.03  Tue Nov  4 18:09:07 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
+     - added Rose::Object to the benchmarks (thanks John Siracusa)
+
 0.02  Sun Nov  2 23:57:27 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
      - hidden the helper packages from the PAUSE indexer
      - t/versions.t now also prints to STDERR

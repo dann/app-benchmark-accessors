@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 package    # hide from PAUSE
@@ -116,6 +116,12 @@ package    # hide from PAUSE
   WithObjectTinyXS;
 use Object::Tiny qw/myattr/;
 use Class::XSAccessor accessors => { myattr => 'myattr' }, replace => 1;
+
+
+package    # hide from PAUSE
+  WithRose;
+use base qw(Rose::Object);
+use Rose::Object::MakeMethods::Generic(scalar => 'myattr');
 
 
 1;

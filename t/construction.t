@@ -2,7 +2,7 @@
 
 use warnings;
 use strict;
-use App::Benchmark ':all';
+use App::Benchmark;
 use App::Benchmark::Accessors;
 
 my $iterations = shift;
@@ -41,5 +41,7 @@ benchmark_diag($iterations, {
         sub { WithClassXSAccessorArray->new(myattr => 27) },
     object_tiny_xs =>
         sub { WithObjectTinyXS->new(myattr => 27) },
+    rose =>
+        sub { WithRose->new(myattr => 27) },
 });
 
