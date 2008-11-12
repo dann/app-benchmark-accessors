@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 
 package    # hide from PAUSE
@@ -122,6 +122,13 @@ package    # hide from PAUSE
   WithRose;
 use base qw(Rose::Object);
 use Rose::Object::MakeMethods::Generic(scalar => 'myattr');
+
+
+package    # hide from PAUSE
+  WithBadgerClass;
+use Badger::Class
+    base     => 'Badger::Base',
+    mutators => 'myattr';
 
 
 1;

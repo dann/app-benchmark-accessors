@@ -1,5 +1,10 @@
 Revision history for Perl extension App-Benchmark-Accessors
 
+0.04  Wed Nov 12 13:02:10 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
+     - added Badger::Class to the benchmarks (thanks Andy Wardley)
+     - simplified t/construction.t to just construct objects, no accessor
+       initialization
+
 0.03  Tue Nov  4 18:09:07 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
      - added Rose::Object to the benchmarks (thanks John Siracusa)
 

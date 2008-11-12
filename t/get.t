@@ -26,6 +26,7 @@ my $ClassXSAccessor          = WithClassXSAccessor->new;
 my $ClassXSAccessorArray     = WithClassXSAccessorArray->new;
 my $ObjectTinyXS             = WithObjectTinyXS->new;
 my $Rose                     = WithRose->new;
+my $BadgerClass              = WithBadgerClass->new;
 
 benchmark_diag($iterations, {
     moose =>
@@ -64,5 +65,7 @@ benchmark_diag($iterations, {
         sub { $ObjectTinyXS->myattr },
     rose =>
         sub { $Rose->myattr },
+    badger_class =>
+        sub { $BadgerClass->myattr },
 });
 

@@ -23,6 +23,7 @@ my @modules = qw(
     Class::XSAccessor
     Class::XSAccessor::Array
     Rose::Object
+    Badger
 );
 
 for my $module (sort @modules) {
