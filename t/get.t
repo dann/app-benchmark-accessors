@@ -26,46 +26,29 @@ my $ClassXSAccessor          = WithClassXSAccessor->new;
 my $ClassXSAccessorArray     = WithClassXSAccessorArray->new;
 my $ObjectTinyXS             = WithObjectTinyXS->new;
 my $Rose                     = WithRose->new;
-my $BadgerClass              = WithBadgerClass->new;
+#my $BadgerClass              = WithBadgerClass->new;
+my $RubyishAttribute         = WithRubyishAttribute->new;
 
 benchmark_diag($iterations, {
-    moose =>
-        sub { $Moose->myattr },
-    moose_immutable =>
-        sub { $MooseImmutable->myattr },
-    mouse =>
-        sub { $Mouse->myattr },
-    class_accessor =>
-        sub { $ClassAccessor->myattr },
-    class_accessor_fast =>
-        sub { $ClassAccessorFast->myattr },
-    class_accessor_fast_xs =>
-        sub { $ClassAccessorFastXS->myattr },
-    class_accessor_complex =>
-        sub { $ClassAccessorComplex->myattr },
-    class_accessor_constructor =>
-        sub { $ClassAccessorConstructor->myattr },
-    mojo =>
-        sub { $Mojo->myattr },
-    class_methodmaker =>
-        sub { $ClassMethodMaker->myattr },
-    object_tiny =>
-        sub { $ObjectTiny->myattr },
-    accessors =>
-        sub { $Accessors->myattr },
-    spiffy =>
-        sub { $Spiffy->myattr },
-    class_spiffy =>
-        sub { $ClassSpiffy->myattr },
-    class_xsaccessor =>
-        sub { $ClassXSAccessor->myattr },
-    class_xsaccessor_array =>
-        sub { $ClassXSAccessorArray->myattr },
-    object_tiny_xs =>
-        sub { $ObjectTinyXS->myattr },
-    rose =>
-        sub { $Rose->myattr },
-    badger_class =>
-        sub { $BadgerClass->myattr },
+    moose => sub { $Moose->myattr },
+    moose_immutable => sub { $MooseImmutable->myattr },
+    mouse => sub { $Mouse->myattr },
+    class_accessor => sub { $ClassAccessor->myattr },
+    class_accessor_fast => sub { $ClassAccessorFast->myattr },
+    class_accessor_fast_xs => sub { $ClassAccessorFastXS->myattr },
+    class_accessor_complex => sub { $ClassAccessorComplex->myattr },
+    class_accessor_constructor => sub { $ClassAccessorConstructor->myattr },
+    mojo => sub { $Mojo->myattr },
+    class_methodmaker => sub { $ClassMethodMaker->myattr },
+    object_tiny => sub { $ObjectTiny->myattr },
+    accessors => sub { $Accessors->myattr },
+    spiffy => sub { $Spiffy->myattr },
+    class_spiffy => sub { $ClassSpiffy->myattr },
+    class_xsaccessor => sub { $ClassXSAccessor->myattr },
+    class_xsaccessor_array => sub { $ClassXSAccessorArray->myattr },
+    object_tiny_xs => sub { $ObjectTinyXS->myattr },
+    rose => sub { $Rose->myattr },
+    #badger_class => sub { $BadgerClass->myattr },
+    rubyish_attribute => sub { $RubyishAttribute->myattr },
 });
 

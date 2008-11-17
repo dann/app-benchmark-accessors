@@ -124,11 +124,19 @@ use base qw(Rose::Object);
 use Rose::Object::MakeMethods::Generic(scalar => 'myattr');
 
 
+#package    # hide from PAUSE
+#  WithBadgerClass;
+#use Badger::Class
+#    base     => 'Badger::Base',
+#    mutators => 'myattr';
+
+
 package    # hide from PAUSE
-  WithBadgerClass;
-use Badger::Class
-    base     => 'Badger::Base',
-    mutators => 'myattr';
+  WithRubyishAttribute;
+use Rubyish::Attribute ':all';
+sub new { bless {}, shift }
+
+attr_accessor(["myattr"]);
 
 
 1;

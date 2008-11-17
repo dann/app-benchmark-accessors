@@ -25,44 +25,28 @@ my $ClassXSAccessor          = WithClassXSAccessor->new;
 my $ClassXSAccessorArray     = WithClassXSAccessorArray->new;
 my $ObjectTinyXS             = WithObjectTinyXS->new;
 my $Rose                     = WithRose->new;
-my $BadgerClass              = WithBadgerClass->new;
+#my $BadgerClass              = WithBadgerClass->new;
+my $RubyishAttribute         = WithRubyishAttribute->new;
 
 benchmark_diag($iterations, {
-    moose =>
-        sub { $Moose->myattr(27) },
-    moose_immutable =>
-        sub { $MooseImmutable->myattr(27) },
-    mouse =>
-        sub { $Mouse->myattr(27) },
-    class_accessor =>
-        sub { $ClassAccessor->myattr(27) },
-    class_accessor_fast =>
-        sub { $ClassAccessorFast->myattr(27) },
-    class_accessor_fast_xs =>
-        sub { $ClassAccessorFastXS->myattr(27) },
-    class_accessor_complex =>
-        sub { $ClassAccessorComplex->myattr(27) },
-    class_accessor_constructor =>
-        sub { $ClassAccessorConstructor->myattr(27) },
-    mojo =>
-        sub { $Mojo->myattr(27) },
-    class_methodmaker =>
-        sub { $ClassMethodMaker->myattr(27) },
-    accessors =>
-        sub { $Accessors->myattr(27) },
-    spiffy =>
-        sub { $Spiffy->myattr(27) },
-    class_spiffy =>
-        sub { $ClassSpiffy->myattr(27) },
-    class_xsaccessor =>
-        sub { $ClassXSAccessor->myattr },
-    class_xsaccessor_array =>
-        sub { $ClassXSAccessorArray->myattr },
-    object_tiny_xs =>
-        sub { $ObjectTinyXS->myattr },
-    rose =>
-        sub { $Rose->myattr(27) },
-    badger_class =>
-        sub { $BadgerClass->myattr(27) },
+    moose => sub { $Moose->myattr(27) },
+    moose_immutable => sub { $MooseImmutable->myattr(27) },
+    mouse => sub { $Mouse->myattr(27) },
+    class_accessor => sub { $ClassAccessor->myattr(27) },
+    class_accessor_fast => sub { $ClassAccessorFast->myattr(27) },
+    class_accessor_fast_xs => sub { $ClassAccessorFastXS->myattr(27) },
+    class_accessor_complex => sub { $ClassAccessorComplex->myattr(27) },
+    class_accessor_constructor => sub { $ClassAccessorConstructor->myattr(27) },
+    mojo => sub { $Mojo->myattr(27) },
+    class_methodmaker => sub { $ClassMethodMaker->myattr(27) },
+    accessors => sub { $Accessors->myattr(27) },
+    spiffy => sub { $Spiffy->myattr(27) },
+    class_spiffy => sub { $ClassSpiffy->myattr(27) },
+    class_xsaccessor => sub { $ClassXSAccessor->myattr(27) },
+    class_xsaccessor_array => sub { $ClassXSAccessorArray->myattr(27) },
+    object_tiny_xs => sub { $ObjectTinyXS->myattr(27) },
+    rose => sub { $Rose->myattr(27) },
+    #badger_class => sub { $BadgerClass->myattr(27) },
+    rubyish_attribute => sub { $RubyishAttribute->myattr(27) },
 });
 

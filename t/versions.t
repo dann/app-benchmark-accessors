@@ -23,8 +23,10 @@ my @modules = qw(
     Class::XSAccessor
     Class::XSAccessor::Array
     Rose::Object
-    Badger
+    Rubyish::Attribute
 );
+
+#Badger
 
 for my $module (sort @modules) {
     $module->require or die $@;

@@ -24,6 +24,8 @@ requires 'accessors';
 requires 'Class::XSAccessor';
 requires 'Class::XSAccessor::Array';
 requires 'Rose::Object';
+#requires 'Badger::Class';
+requires 'Rubyish::Attribute';
 
 recommends 'Test::Pod';
 recommends 'Test::Pod::Coverage';

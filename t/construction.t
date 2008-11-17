@@ -26,6 +26,6 @@ benchmark_diag($iterations, {
     class_xsaccessor_array     => sub { WithClassXSAccessorArray->new     } ,
     object_tiny_xs             => sub { WithObjectTinyXS->new             } ,
     rose                       => sub { WithRose->new                     } ,
-    badger_class               => sub { WithBadgerClass->new              } ,
+    #badger_class               => sub { WithBadgerClass->new              } ,
 });
 
