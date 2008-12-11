@@ -146,7 +146,7 @@ __END__
 
 =head1 NAME
 
-App::Benchmark::Accessors - benchmark accessor generators
+App::Benchmark::Accessors - Benchmark accessor generators
 
 =head1 SYNOPSIS
 
