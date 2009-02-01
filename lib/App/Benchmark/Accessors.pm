@@ -183,7 +183,7 @@ following generators are being benchmarked:
 
 =item Class::Spiffy
 
-=item accessors
+=item C<accessors>
 
 =item Class::XSAccessor
 
