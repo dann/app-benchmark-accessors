@@ -1,6 +1,4 @@
-benchmark.txt
 Changes
-Debian_CPANTS.txt
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
@@ -23,6 +21,7 @@ t/construction.t
 t/get.t
 t/set.t
 t/versions.t
+util/app-benchmark-accessors-upgrade.pl
 xt/author/00_compile.t
 xt/author/01_perl_critic.t
 xt/author/02_pod.t
