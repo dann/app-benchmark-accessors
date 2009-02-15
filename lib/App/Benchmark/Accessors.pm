@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 
 package    # hide from PAUSE
@@ -133,10 +133,10 @@ use Rose::Object::MakeMethods::Generic(scalar => 'myattr');
 
 package    # hide from PAUSE
   WithRubyishAttribute;
-use Rubyish::Attribute ':all';
+use Rubyish::Attribute;
 sub new { bless {}, shift }
 
-attr_accessor(["myattr"]);
+attr_accessor "myattr";
 
 
 1;
