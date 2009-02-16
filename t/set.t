@@ -11,6 +11,7 @@ $iterations ||= 2_000_000;
 my $Moose                    = WithMoose->new;
 my $MooseImmutable           = WithMooseImmutable->new;
 my $Mouse                    = WithMouse->new;
+my $MouseImmutable           = WithMouseImmutable->new;
 my $ClassAccessor            = WithClassAccessor->new;
 my $ClassAccessorFast        = WithClassAccessorFast->new;
 my $ClassAccessorFastXS      = WithClassAccessorFastXS->new;
@@ -32,6 +33,7 @@ benchmark_diag($iterations, {
     moose => sub { $Moose->myattr(27) },
     moose_immutable => sub { $MooseImmutable->myattr(27) },
     mouse => sub { $Mouse->myattr(27) },
+    mouse_immutable => sub { $MouseImmutable->myattr(27) },
     class_accessor => sub { $ClassAccessor->myattr(27) },
     class_accessor_fast => sub { $ClassAccessorFast->myattr(27) },
     class_accessor_fast_xs => sub { $ClassAccessorFastXS->myattr(27) },

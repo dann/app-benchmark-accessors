@@ -25,6 +25,11 @@ package    # hide from PAUSE
 use Mouse;
 has myattr => ( is => 'rw' );
 
+package    # hide from PAUSE
+  WithMouseImmutable;
+use Mouse;
+has myattr => ( is => 'rw' );
+__PACKAGE__->meta->make_immutable;
 
 package    # hide from PAUSE
   WithClassAccessor;
