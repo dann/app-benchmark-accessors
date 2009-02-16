@@ -1,5 +1,8 @@
 Revision history for Perl extension App-Benchmark-Accessors
 
+0.06 Mon Feb 16 12:55:35 CET 2009 (Marcel Gruenauer <marcel@cpan.org>)
+     - added 'Mouse immutable' tests (thanks dann)
+
 0.05 Sun Feb 15 22:49:40 CET 2009 (Marcel Gruenauer <marcel@cpan.org>)
      - updated to new Rubyish::Attribute API
      - added util/app-benchmark-accessors-upgrade.pl
